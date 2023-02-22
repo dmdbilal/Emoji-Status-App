@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "568402119152",
+    "project_id": "emojistatusapp-fa594",
+    "storage_bucket": "emojistatusapp-fa594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568402119152:android:779fd75dd0ea467e57f535",
+        "android_client_info": {
+          "package_name": "com.dmdbilal.emojistatusapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568402119152-tkalc5lnb0fnj49bfkgu8o0ooj7co6ba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dmdbilal.emojistatusapp",
+            "certificate_hash": "c51f76d8b646b298f6cfc36b391d0156ab8ff4b4"
+          }
+        },
+        {
+          "client_id": "568402119152-avqkpb9829daoj40trtejrh0mqlut9h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfsUPBf9PsVmDQ8eIBdPjgcLVJvbo_jkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568402119152-avqkpb9829daoj40trtejrh0mqlut9h5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
