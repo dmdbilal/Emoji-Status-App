@@ -1,8 +1,11 @@
 package com.dmdbilal.emojistatusapp.presentation
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.Spanned
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -14,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dmdbilal.emojistatusapp.R
 import com.dmdbilal.emojistatusapp.data.recyclerView.ItemAdapter
 import com.dmdbilal.emojistatusapp.data.recyclerView.ItemViewHolder
+import com.dmdbilal.emojistatusapp.domain.EmojiFilter
 import com.dmdbilal.emojistatusapp.domain.User
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -22,12 +26,12 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import kotlin.math.absoluteValue
 
 class MainActivity : AppCompatActivity() {
 
     private companion object {
         private val TAG = "MainActivity"
+
     }
 
     private lateinit var auth: FirebaseAuth
@@ -79,8 +83,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAlertDialog() {
         val editText = EditText(this)
-        editText.hint = "Enter emojis"
-        //TODO: restrict the input to only emoji of length 9.
+        val lengthFilter = InputFilter.LengthFilter(9)
+        val emojiFilter = EmojiFilter(this)
+        editText.filters = arrayOf(lengthFilter, emojiFilter)
+
         val dialog = AlertDialog.Builder(this)
             .setTitle("Update your status")
             .setView(editText)
