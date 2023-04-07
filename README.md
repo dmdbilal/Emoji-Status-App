@@ -1,5 +1,5 @@
 # Emoji Status App
-In this app, multiple logged in user can show their emoji status with all users along with their name. Also user can update their status anytime.
+In the Emoji Status App, multiple logged-in users can display their emoji status with their name. Users can choose from a variety of emojis to represent their current status and update it anytime. Here I’ve used firebase for authentication and firebase realtime database for storing and retrieving the emoji status.
 
 ### Features
 - [x] Can display status of all the users
